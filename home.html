@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .login-box {
+            width: 100%;
+        }
+
+        .logo h2 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .or-divider {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .or-divider::before {
+            left: 0;
+        }
+
+        .or-divider::after {
+            right: 0;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-buttons button {
+            width: 32%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .social-buttons .google {
+            background-color: #db4437;
+            color: #fff;
+        }
+
+        .social-buttons .facebook {
+            background-color: #3b5998;
+            color: #fff;
+        }
+
+        .social-buttons .apple {
+            background-color: #000;
+            color: #fff;
+        }
+
+        @media (max-width: 400px) {
+            .login-container {
+                padding: 10px;
+            }
+
+            input[type="email"],
+            input[type="password"],
+            button {
+                padding: 8px;
+            }
+
+            .social-buttons button {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h2>🔐</h2>
+            </div>
+            <h2>Sign in with email</h2>
+            <p>Make a new doc to bring your words, data, and teams together. For free</p>
+
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button onclick="login()">Get Started</button>
+
+            <div class="or-divider"> Or sign in with </div>
+
+            <div class="social-buttons">
+                <button class="google">G</button>
+                <button class="facebook">F</button>
+                <button class="apple">X</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (email === "iloveyou@gmail.com" && password === "123456a") {
+                alert("Login Successful!");
+                window.location.href = "ot.html"; // Redirect to index page
+            } else {
+                alert("Invalid Email or Password");
+            }
+        }
+    </script>
+
+</body>
+</html>
