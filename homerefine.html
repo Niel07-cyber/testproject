@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+    <!-- Login Container -->
+    <div class="w-full max-w-sm p-6 bg-white shadow-lg rounded-lg">
+        <!-- Logo -->
+        <div class="text-center mb-6">
+            <h2 class="text-4xl text-indigo-600">💘</h2>
+        </div>
+
+        <!-- Heading and Subheading -->
+        <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4">Klaaaaaaaaa</h2>
+        <p class="text-center text-gray-600 mb-6">Hey Foriwah 🌸 Welcome to this space 😊❤️, Its a website i made just for you! You are my today and all of my tomorrows <br><span class="text-sm font-semibold">Text me for the logins</span></p>
+
+        <!-- Email Input -->
+        <input type="email" id="email" placeholder="Email" class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500" required>
+
+        <!-- Password Input -->
+        <input type="password" id="password" placeholder="Password" class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500" required>
+
+        <!-- Forgot Password -->
+        <div class="flex justify-end mb-6">
+            <a href="#" class="text-sm text-indigo-600 hover:underline">Forgot password?</a>
+        </div>
+
+        <!-- Login Button -->
+        <button onclick="login()" class="w-full p-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-200">Get Started</button>
+
+        <!-- Divider -->
+       
+        <!-- Social Buttons -->
+        
+    </div>
+
+    <script>
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (email === "iloveyou@gmail.com" && password === "123456a") {
+                alert("Login Successful!");
+                window.location.href = "ot.html"; // Redirect to index page
+            } else {
+                alert("Invalid Email or Password");
+            }
+        }
+    </script>
+</body>
+</html>
