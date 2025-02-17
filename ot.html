@@ -8,7 +8,7 @@
 </head>
 <body class="flex bg-gray-100 text-gray-900">
     <!-- Sidebar -->
-    <div class="w-40 lg:w-1/6 md:w-1/5 sm:w-1/4 bg-indigo-600 text-white h-screen p-5 fixed lg:relative">
+    <div class="w-40 lg:w-1/6 md:w-1/5 sm:w-1/4 bg-blue-400 text-white h-screen p-5 fixed lg:relative">
         <h2 class="text-xl font-semibold mb-6 italic">Niels Space</h2>
         <nav class="flex flex-col space-y-4">
             <a href="ot.html" class="flex items-center space-x-2 hover:bg-indigo-500 p-2 rounded">
@@ -26,14 +26,31 @@
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-3xl font-cursive">Hello, Pookieeeeeeee ❤️</h1>
             <div class="relative">
-                <button class="bg-indigo-600 text-white p-3 rounded-full">
+                <button class="bg-blue-400 text-white p-3 rounded-full" onclick="toggleDropdown()">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9.003 9.003 0 0112 15c2.21 0 4.21.896 5.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0zM12 2a10 10 0 100 20 10 10 0 000-20z" />
                     </svg>
                 </button>
+                <div id="dropdown" class="absolute right-0 mt-2 bg-white border shadow-lg rounded-md hidden">
+                    <a href="#" class="block px-4 py-2 text-gray-700 border-b">Profile</a>
+                    <a href="home.html" class="block px-4 py-2 text-gray-700">Logout</a>
+                </div>
+                <script>
+                    function toggleDropdown() {
+                        var dropdown = document.getElementById('dropdown');
+                        dropdown.classList.toggle('hidden');
+                    }
+                    document.addEventListener('click', function(event) {
+                        var dropdown = document.getElementById('dropdown');
+                        var button = event.target.closest('button');
+                        if (!button && !dropdown.contains(event.target)) {
+                            dropdown.classList.add('hidden');
+                        }
+                    });
+                </script>
                 <div class="absolute right-0 mt-2 bg-white border shadow-lg rounded-md hidden">
                     <a href="#" class="block px-4 py-2 text-gray-700 border-b">Profile</a>
-                    <a href="homerefine.html" class="block px-4 py-2 text-gray-700">Logout</a>
+                    <a href="home.html" class="block px-4 py-2 text-gray-700">Logout</a>
                 </div>
             </div>
         </div>
@@ -42,7 +59,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Hotel Card -->
             <div class="bg-white shadow rounded-lg p-5">
-                <img src="tt.jpg" alt="Hotel" class="w-full h-64 object-cover rounded-md">
+                <img src="assets/photo_4_2025-02-17_02-01-28.jpg" alt="Hotel" class="w-full h-64 object-cover rounded-md">
                 <h3 class="text-lg font-semibold mt-4 "> Hey Babe🫶, I  thought about what you said about me leaving without anything so i decided to do this to make up for it</h3>
                 <p class="text-gray-600 font-serif italic">PS: "Distance is a temporal circumstance, not a barrier"</p>
                 <p class="mt-2">Welcome to Niels Space...<br><i>Click on Messages to see all texts I have for you.</i></p>
@@ -50,43 +67,7 @@
             </div>
 
             <!-- Calendar -->
-            <div class="bg-white shadow rounded-lg p-4 w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto">
-                <h2 class="text-center text-lg font-semibold">February 2025</h2>
-                <table class="w-full border-collapse mt-3 text-center">
-                    <thead>
-                        <tr class="bg-indigo-600 text-white">
-                            <th class="py-2">Mon</th>
-                            <th class="py-2">Tue</th>
-                            <th class="py-2">Wed</th>
-                            <th class="py-2">Thu</th>
-                            <th class="py-2">Fri</th>
-                            <th class="py-2">Sat</th>
-                            <th class="py-2">Sun</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td>
-                        </tr>
-                        <tr>
-                            <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
-                        </tr>
-                        <tr>
-                            <td>11</td><td>12</td><td>13</td>
-                            <td class="bg-indigo-500 text-white font-bold rounded-full">14</td>
-                            <td>15</td><td>16</td>
-                            <td class="bg-indigo-500 text-white font-bold rounded-full">17</td>
-                        </tr>
-                        <tr>
-                            <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
-                        </tr>
-                        <tr>
-                            <td>25</td><td>26</td><td>27</td><td>28</td><td></td><td></td><td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+            
     </div>
 </body>
 </html>

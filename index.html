@@ -17,7 +17,7 @@
 
     <!-- Back Button -->
     <div class="absolute top-4 left-4">
-        <a href="ot.html" class="text-gray-700 text-lg font-semibold hover:text-gray-900">&larr; Back</a>
+        <a href="ot.html" class="text-blue-500 text-lg font-semibold hover:text-blue-700 border border-gray-300 rounded-full p-2">&larr; return</a>
     </div>
 
     <!-- Main Container -->
@@ -40,9 +40,9 @@
             <!-- Chat Box -->
             <div id="chatBox" class="flex-1 overflow-y-auto mt-4 space-y-2 p-3 bg-gray-50 rounded-md flex flex-col items-start">
                
-                <div class="flex items-start">
-                    <img src="image.png" alt="Placeholder Image" class="max-w-full h-auto rounded-md" style="width: 50%; height: auto;">
-                    <p class="ml-4 mt-0">I hope you achieve everything on this vision board and more. 🙏 I believe so much in you and I know what you are capable of</p>
+                <div class="relative w-full">
+                    <img src="assets/image.png" alt="Placeholder Image" class="w-full h-auto rounded-md object-cover">
+                    
                 </div>
             </div>
         </main>
@@ -51,53 +51,65 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const messages = [
-                { name: "Valentines Day", text: "Niel is typing...", time: "10:10 AM", img: "1", chats: [
-                    { sender: "Niel", text: "To the most wonderful woman I’ve ever met 🍷 You’re the queen of my life and I don’t need a valentine’s day to prove it. For me, every single day is valentine’s day because I’m so deeply in love with you." },
-                    { sender: "Niel", text: "You are my love, my best friend, my one and only. Happy Valentines’s Day❤️.I am successful because I love an incredible woman who always believes in me. You bring out the best in me, and your love completes me. Life would be simply meaningless without you. Thank you for being my girlfriend" }
-                ]},
-                { name: "Anniversary", text: "Omg it's our Anniversary...", time: "10:09 AM", img: "2", chats: [
-                    { sender: "Niel", text: " Every love story is special, unique and beautiful—but ours is my favorite.I believe everything happens for a reason because it led me to you when I least expected.I really appreciate the memories weve had and yet to have" },
-                    { sender: "Niel", text: " I want to love you, adore you, take care of you and make you the happiest person there ever was for all of time.When a love is true, there is no ending. I hope we get to celebrate for many years to come. ❤️ Forever wouldn’t be long enough with you fr. Happy Anniversary! I love you 🥰." }
-                ]},
-                { name: "Birthday WFD!", text: "Guess what?", time: "9:30 AM", img: "3", chats: [
-                    { sender: "Niel", text: "Candles aren’t the only thing getting hotter! Happy birthday, hot stuff! 🎉Are you getting sexier each year or is it me? God made a masterpiece when he created you. The world must be 'privileged' to have someone like you" },
-                    { sender: "Niel", text: " Anyways Happy birthday to one of God’s greatest creations! May this day be filled with Joy and Happiness. May this new age be an age of success and prosperity. I hope today brings you everything you’ve ever wished for or dreamed of because you deserve and more. This world is not yet ready for you! Just 22 years and many more to come.I am still older than you regardless" }
-                ]},
-                { name: "Exams Day", text: "What’s the plan for Saturday?", time: "8:45 AM", img: "4", chats: [
-                    { sender: "Niel", text: "May your efforts and dedication bear fruit in the exam. Best wishes, and may you have a stress-free exam.Someone has to be tested to be trusted. The exam is only here to test your capability, but you are more than capable. You will excel" },
-                    { sender: "Niel", text: "Sweetheart, I know how much effort you've put into studying. I am praying for your triumph and peace during this time.You will come out with flying colors. You inspire me because you are focused and dedicated to your studies Your effort to prepare for this exam will be worthwhile. God will crown you" }
-                ]},
-                { name: "Need Motivation", text: "Got a quick update for you.", time: "7:50 AM", img: "5", chats: [
-                    { sender: "Niel", text: "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle!" },
-                    { sender: "Niel", text: "Every day may not be good, but there is something good in every day!" },
-                    { sender: "Niel", text: "You are stronger than you think, braver than you believe, and more beautiful than you imagine!" },
-                    { sender: "Niel", text: "Life is 10% what happens to us and 90% how we react to it!" },
-                    { sender: "Niel", text: "She believed she could, so she did!" },
-                    { sender: "Niel", text: "Your potential is endless!" },
-                    { sender: "Niel", text: "You have within you right now, everything you need to deal with whatever the world can throw at you!" }
-                ]},
-                { name: "Bible Verses to read", text: "Excited for the trip!", time: "6:30 AM", img: "6", chats: [
-                    { sender: "Niel", text: "Packing for our trip!" },
-                    { sender: "You", text: "I can't wait!" }
-                ]},
-                { name: "National Bestfriend Day", text: "Where should we eat?", time: "5:15 AM", img: "7", chats: [
-                    { sender: "Niel", text: "To my partner in crime, my confidant, and my rock—Happy National Best Friend Day! I'm grateful every day to have you by my side." },
-                    { sender: "Niel", text: "A best friend is like a precious gem, rare and invaluable. Thank you for being my gem, shining brightly in my life. Best friends are like stars that light up our darkest nights. Your presence illuminates my life, and I'm forever grateful for you. Wishing you a joyful Best Friend Day"},
-                    { sender: "Niel", text: "To my best friend, I'll always be there for you, no matter what!" }
-                ]},
-                { name: "Tough Days", text: "Let’s finalize the details.", time: "4:50 AM", img: "8", chats: [
-                    { sender: "Niel", text: "I know things are tough right now, but please remember you are stronger than you think. I’m here for you, always." },
-                    { sender: "You", text: "No matter how dark the days may seem, remember that brighter ones are ahead. I’m thinking of you." },
-                    { sender: "Niel", text: "know you’re facing a lot right now, but remember, you’ve overcome every challenge so far. You’ve got this." },
-                    { sender: "Niel", text: "In tough times like these, it’s important to stay strong. But also remember it’s okay to lean on others. I’m here for you." },
-                    { sender: "Niel", text: "I know things are tough right now, but please remember you are stronger than you think. I’m here for you, always." },
-                    { sender: "You", text: "This is tough, but it's temporary. Life will go on." },
-                    
-                ]},
-                { name: "Reassurance", text: "Just thinking about something...", time: "3:20 AM", img: "9", chats: [
-                    { sender: "Niel", text: "I just realized something crazy..." },
-                    { sender: "You", text: "What is it?" }
-                ]}
+            { name: "Vals Day", text: "Niel is typing...", img: "./assets/tt.jpg", chats: [
+            { sender: "Niel", text: "To the most wonderful woman I’ve ever met 🍷 You’re the queen of my life and I don’t need a valentine’s day to prove it. For me, every single day is valentine’s day because I’m so deeply in love with you." },
+            { sender: "Niel", text: "You are my love, my best friend, my one and only. Happy Valentines’s Day❤️.I am successful because I love an incredible woman who always believes in me. You bring out the best in me, and your love completes me. Life would be simply meaningless without you. Thank you for being my girlfriend" }
+            ]},
+            { name: "Anniversary", text: "Omg it's our Anniversary...", img: "./assets/meandherbrown.jpg", chats: [
+            { sender: "Niel", text: " Every love story is special, unique and beautiful—but ours is my favorite.I believe everything happens for a reason because it led me to you when I least expected.I really appreciate the memories weve had and yet to have" },
+            { sender: "Niel", text: " I want to love you, adore you, take care of you and make you the happiest person there ever was for all of time.When a love is true, there is no ending. I hope we get to celebrate for many years to come. ❤️ Forever wouldn’t be long enough with you fr. Happy Anniversary! I love you 🥰." }
+            ]},
+            { name: "Birthday WFD!", text: "Bdayyyy?", img: "./assets/photo_1_2025-02-17_02-01-28.jpg", chats: [
+            { sender: "Niel", text: "Candles aren’t the only thing getting hotter! Happy birthday, hot stuff! 🎉Are you getting sexier each year or is it"},
+            { sender: "Niel", text: " Anyways Happy birthday to one of God’s greatest creations! May this day be filled with Joy and Happiness. May this new age be an age of success and prosperity. I hope today brings you everything you’ve ever wished for or dreamed of because you deserve and more. This world is not yet ready for you! Just 22 years and many more to come.I am still older than you regardless" }
+            ]},
+            { name: "Exams", text: "Sucess..", img: "./assets/photo_3_2025-02-17_02-01-28.jpg", chats: [
+                { sender: "Niel", text: "May your efforts and dedication bear fruit in the exam. Best wishes, and may you have a stress-free exam.Someone has to be tested to be trusted. The exam is only here to test your capability, but you are more than capable. You will excel" },
+                { sender: "Niel", text: "Sweetheart, I know how much effort you've put into studying. I am praying for your triumph and peace during this time.You will come out with flying colors. You inspire me because you are focused and dedicated to your studies Your effort to prepare for this exam will be worthwhile. God will crown you" }
+            ]},
+            { name: "Motivation", text: "I am ....", img: "./assets/photo_5_2025-02-17_02-01-28.jpg", chats: [
+                { sender: "Niel", text: "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle!" },
+                { sender: "Niel", text: "Every day may not be good, but there is something good in every day!" },
+                { sender: "Niel", text: "You are stronger than you think, braver than you believe, and more beautiful than you imagine!" },
+                { sender: "Niel", text: "Life is 10% what happens to us and 90% how we react to it!" },
+                { sender: "Niel", text: "She believed she could, so she did!" },
+                { sender: "Niel", text: "Your potential is endless!" },
+                { sender: "Niel", text: "You have within you right now, everything you need to deal with whatever the world can throw at you!" }
+            ]},
+            { name: "Bible Verses to read", text: "Nyame te ase..!", img: "./assets/photo_2_2025-02-17_02-01-28.jpg", chats: [
+                { sender: "Niel", text: "1 Peter 5:6-7" },
+                { sender: "Niel", text: "Proverbs 16:3" },
+                { sender: "Niel", text: "Philippians 4:6-7" },
+                { sender: "Niel", text: "Psalm 46:10" },
+                { sender: "Niel", text: "Psalm 37:4-7" },
+                { sender: "Niel", text: "Psalm 23:1-6" },
+                { sender: "Niel", text: "Psalm 91:1-16" },
+                { sender: "Niel", text: "Isaiah 41:10"},
+                { sender: "Niel", text: "Joshua 1:9"},
+                { sender: "Niel", text: "Psalm 34:4"}
+            ]},
+            { name: "Bestie Day", text: "Wifeeeeeeeeey..", img: "./assets/photo_15_2025-02-17_02-01-28.jpg", chats: [
+                { sender: "Niel", text: "To my partner in crime, my confidant, and my rock—Happy National Best Friend Day! I'm grateful every day to have you by my side." },
+                { sender: "Niel", text: "A best friend is like a precious gem, rare and invaluable. Thank you for being my gem, shining brightly in my life. Best friends are like stars that light up our darkest nights. Your presence illuminates my life, and I'm forever grateful for you. Wishing you a joyful Best Friend Day"},
+                { sender: "Niel", text: "To my best friend, I'll always be there for you, no matter what!" }
+            ]},
+            { name: "Tough Days", text: "they never last...", img: "./assets/photo_4_2025-02-17_02-01-28.jpg", chats: [
+                { sender: "Niel", text: "I know things are tough right now, but please remember you are stronger than you think. I’m here for you, always." },
+                { sender: "Niel", text: "No matter how dark the days may seem, remember that brighter ones are ahead. I’m thinking of you." },
+                { sender: "Niel", text: "know you’re facing a lot right now, but remember, you’ve overcome every challenge so far. You’ve got this." },
+                { sender: "Niel", text: "In tough times like these, it’s important to stay strong. But also remember it’s okay to lean on others. I’m here for you." },
+                { sender: "Niel", text: "I know things are tough right now, but please remember you are stronger than you think. I’m here for you, always." },
+                { sender: "Niel", text: "This is tough, but it's temporary. Life will go on." },
+                
+            ]},
+            { name: "Reassurance", text: "I love you....", img: "./assets/photo_6_2025-02-17_02-01-28.jpg", chats: [
+                { sender: "Niel", text: "Im going to love you forever. Youre my soulmate. You brighten my day and make me So incredibly happy I cant describe it. You have had my heart completely and it beats for you. You make me work harder everday knowing I'm working for my future with you. You make me want to be the very best man I can possibly be just for the chance to one day be your husband and make you happy for the rest of yout life. Youre my queen and I feel like I'd be lost without you. I love you so much baby and I never want to lose you. Im yours forever baby! " },
+                { sender: "Niel", text: "Always and Forever(AaF) I am never ever given up on you no matter what! You are my wife and i will do whatever it takes to marry you" }
+            ]},
+            { name: "GF Day", text: "Are you my gf or wife...", img: "./assets/photo_13_2025-02-17_02-01-28.jpg", chats: [
+                { sender: "Niel", text: "You are my dream come true, and I thank God every day for bringing you into my life. Happy International Girlfriend Day, my love." },
+                { sender: "Niel", text: "You are the missing piece that completes my life puzzle. Happy International Girlfriend Day to the love of my life" }
+            ]}
             ];
 
             const messageList = document.getElementById("messageList");
@@ -105,39 +117,58 @@
             const chatBox = document.getElementById("chatBox");
 
             messages.forEach(msg => {
-                messageList.innerHTML += `
-                    <div class="message flex items-center justify-between p-2 bg-white hover:bg-gray-100 rounded-md cursor-pointer" data-chat="${msg.name}">
-                        <div class="flex items-center space-x-3 w-full overflow-hidden">
-                            <img src="https://i.pravatar.cc/40?img=${msg.img}" class="w-10 h-10 rounded-full flex-shrink-0">
-                            <div class="flex-1 min-w-0">
-                                <h5 class="text-sm font-semibold truncate">${msg.name}</h5>
-                                <p class="text-xs text-gray-500 truncate">${msg.text}</p>
-                            </div>
-                        </div>
-                        <span class="text-xs text-gray-400 flex-shrink-0">${msg.time}</span>
-                    </div>`;
-            });
+    messageList.innerHTML += `
+        <div class="message flex items-center justify-between p-2 bg-white hover:bg-gray-100 rounded-md cursor-pointer" data-chat="${msg.name}">
+    <div class="flex items-center space-x-3 w-full overflow-hidden">
+        <img src="${msg.img}" class="w-10 h-10 rounded-full flex-shrink-0 object-cover"> 
+        <div class="flex-1 min-w-0">
+            <h5 class="text-xs md:text-sm font-semibold truncate">${msg.name}</h5>
+            <p class="text-[10px] md:text-xs text-gray-500 truncate">${msg.text}</p>
+        </div>
+    </div>
+</div>
+`;
+});
+
 
             document.addEventListener("click", function(event) {
-                if (event.target.closest(".message")) {
-                    const chatTitle = event.target.closest(".message").getAttribute("data-chat");
-                    chatHeader.innerText = chatTitle;
-                    chatBox.innerHTML = "";
-                    
-                    const selectedChat = messages.find(msg => msg.name === chatTitle);
-                    if (selectedChat && selectedChat.chats) {
-                        selectedChat.chats.forEach(chat => {
-                            const msgDiv = document.createElement("div");
-                            msgDiv.classList.add(chat.sender === "You" ? "chat-reply" : "chat-msg");
-                            msgDiv.classList.add("p-2", "rounded-md", chat.sender === "You" ? "bg-gray-200 text-right" : "bg-blue-100");
-                            msgDiv.innerHTML = `<p class="text-gray-800"><strong>${chat.sender}:</strong> ${chat.text}</p>`;
-                            chatBox.appendChild(msgDiv);
-                        });
-                    }
+            if (event.target.closest(".message")) {
+                const chatTitle = event.target.closest(".message").getAttribute("data-chat");
+                chatHeader.innerText = chatTitle;
+                chatBox.innerHTML = "";
+                
+                const selectedChat = messages.find(msg => msg.name === chatTitle);
+                if (selectedChat && selectedChat.chats) {
+                selectedChat.chats.forEach(chat => {
+                    const msgDiv = document.createElement("div");
+                    msgDiv.classList.add(chat.sender === "You" ? "chat-reply" : "chat-msg");
+                    msgDiv.classList.add("p-2", "rounded-md", chat.sender === "You" ? "bg-gray-200 text-right" : "bg-blue-100");
+                    msgDiv.innerHTML = `<p class="text-gray-800"><strong>${chat.sender}:</strong> ${chat.text}</p>`;
+                    chatBox.appendChild(msgDiv);
+                });
                 }
+            }
             });
         });
     </script>
+
+<style>
+    @media (max-width: 640px) { /* Adjust for small screens */
+        .message img {
+            width: 28px;
+            height: 28px;
+        }
+        .message h5 {
+            font-size: 0.80rem; /* Smaller font */
+        }
+        .message p {
+            font-size: 0.80rem; /* Smaller text */
+        }
+         
+    }
+
+    
+</style>
 
 </body>
 </html>
